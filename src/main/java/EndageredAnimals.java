@@ -1,14 +1,9 @@
-import org.sql2o.Connection;
-
-import java.util.List;
-
 public class EndageredAnimals extends Animal {
-    private int id;
-    private String name;
-    private String health;
-    private int age;
 
-    public EndageredAnimals(String name,String health, int age) {
+    private String health;
+    private String age;
+
+    public EndageredAnimals(String name,String health, String age) {
         super(name);
         this.health = health;
         this.age = age;
@@ -17,10 +12,8 @@ public class EndageredAnimals extends Animal {
     public String getHealth() {
         return health;
     }
-    public int getAge() {
+    public String getAge() {
         return age;
     }
-    public int getId() {
-        return id;
-    }
+
 }

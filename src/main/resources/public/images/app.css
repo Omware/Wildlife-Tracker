@@ -1,0 +1,44 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.active {
+background-color: green;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+body {
+background-image: url("/images/gaz.jpg");
+    background-size: cover;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+table {
+
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: black;}

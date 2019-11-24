@@ -5,21 +5,19 @@ import java.util.List;
 public class Animal {
 
     private String name;
-    private String type;
+    private static final String type = "Endagered";
     private int id;
 
 
-    public Animal( String name, String type) {
 
+    public Animal(String name) {
         this.name = name;
-        this.type = type;
     }
-
 
     public String getName() {
         return name;
     }
-    public String getType() {
+    public static String getType() {
         return type;
     }
     @Override
