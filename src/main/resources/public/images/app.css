@@ -23,6 +23,8 @@ li a {
 
 li a:hover {
   background-color: #111;
+  text-decoration:none;
+  color:white;
 }
 body {
 background-image: url("/images/vb.jpg");

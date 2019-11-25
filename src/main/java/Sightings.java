@@ -8,10 +8,12 @@ public class Sightings {
     private String ranger;
     private int id;
 
-    public Sightings (int animalId, String location, String ranger) {
-        this.animalId = animalId;
-        this.location = location;
+    public Sightings (String ranger, String location, int animalId ) {
         this.ranger = ranger;
+        this.location = location;
+        this.animalId = animalId;
+
+
     }
     public int getAnimalId() {
         return animalId;

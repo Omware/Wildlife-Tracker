@@ -43,7 +43,7 @@ public class App {
             String ranger = request.queryParams("ranger");
             String location = request.queryParams("location");
             int animalId = Integer.parseInt(request.queryParams("animalId"));
-            Sightings sightings = new Sightings(animalId, location, ranger);
+            Sightings sightings = new Sightings(ranger,location,animalId );
             sightings.save();
             response.redirect("/sightingsdisplay");
             return  null;

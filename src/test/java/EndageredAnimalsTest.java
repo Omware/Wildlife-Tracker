@@ -19,12 +19,12 @@ public class EndageredAnimalsTest {
     @Test
     public void getsAnimalType() {
         EndageredAnimals  testEndageredAnimal = new EndageredAnimals ( "Tiger", "okay", "young");
-        assertEquals("Young", testEndageredAnimal.getAge());
+        assertEquals("young", testEndageredAnimal.getAge());
     }
     @Test
     public void getsAnimalHealth() {
         EndageredAnimals  testEndageredAnimal = new EndageredAnimals ( "Tiger",  "okay", "young");
-        assertEquals("Healthy", testEndageredAnimal.getHealth());
+        assertEquals("okay", testEndageredAnimal.getHealth());
     }
     @Test
     public void savesIdToObject() {
