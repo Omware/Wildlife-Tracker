@@ -2,22 +2,18 @@ import org.sql2o.Connection;
 
 import java.util.List;
 
-public class Animal {
-
-    private String name;
-    private static final String type = "Endagered";
-    private int id;
+public abstract class Animal {
 
 
+    public String name;
+    public  String type;
+    public int id;
 
-    public Animal(String name) {
-        this.name = name;
-    }
 
     public String getName() {
         return name;
     }
-    public static String getType() {
+    public  String getType() {
         return type;
     }
     @Override
@@ -40,22 +36,7 @@ public class Animal {
                     .getKey();
         }
     }
-    public static Animal find(int id) {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "SELECT * FROM animals where id=:id";
-            Animal animal = con.createQuery(sql)
-                    .addParameter("id", id)
-                    .executeAndFetchFirst(Animal.class);
-            return animal;
-        }
-    }
 
-    public static List<Animal> all() {
-        String sql = "SELECT * FROM animals";
-        try(Connection con = DB.sql2o.open()) {
-            return con.createQuery(sql).executeAndFetch(Animal.class);
-        }
-    }
 
     public int getId() {
         return id;

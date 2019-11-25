@@ -8,19 +8,33 @@ public class EndageredAnimalsTest {
     public DatabaseRule database = new DatabaseRule();
     @Test
     public void instantiatesAnimal_true() {
-        EndageredAnimals  testAnimal = new EndageredAnimals ( "Tiger", "Healthy", "Young");
-        assertEquals(true, testAnimal instanceof EndageredAnimals);
+        EndageredAnimals  testEndageredAnimal = new EndageredAnimals ( "Tiger", "okay", "young");
+        assertEquals(true, testEndageredAnimal instanceof EndageredAnimals);
+    }
+    @Test
+    public void getsAnimalName() {
+        EndageredAnimals  testEndageredAnimal = new EndageredAnimals ( "Tiger", "okay", "young");
+        assertEquals("Tiger", testEndageredAnimal.getName());
     }
     @Test
     public void getsAnimalType() {
-        EndageredAnimals  testAnimal = new EndageredAnimals ( "Tiger", "Healthy", "Young");
-        assertEquals("Young", testAnimal.getAge());
+        EndageredAnimals  testEndageredAnimal = new EndageredAnimals ( "Tiger", "okay", "young");
+        assertEquals("Young", testEndageredAnimal.getAge());
     }
     @Test
     public void getsAnimalHealth() {
-        EndageredAnimals  testAnimal = new EndageredAnimals ( "Tiger", "Healthy", "Young");
-        assertEquals("Healthy", testAnimal.getHealth());
+        EndageredAnimals  testEndageredAnimal = new EndageredAnimals ( "Tiger",  "okay", "young");
+        assertEquals("Healthy", testEndageredAnimal.getHealth());
     }
+    @Test
+    public void savesIdToObject() {
+        EndageredAnimals  testEndageredAnimal = new EndageredAnimals ( "Tiger",  "okay", "young");
+        testEndageredAnimal.save();
+        EndageredAnimals savedEndageredAnimal = EndageredAnimals.allEndAnimals().get(0);
+        assertEquals(testEndageredAnimal.getId(), savedEndageredAnimal.getId());
+
+    }
+
 
 
 }

@@ -23,5 +23,16 @@ public class SightingsTest {
         Sightings sightings = new Sightings(1, "Nairobi", "Keith Omware");
         assertEquals("Keith Omware",sightings.getRangerName());
     }
+    @Test
+    public void getsMoreThanOneSighting() {
+        Sightings sightings = new Sightings(1, "Nairobi", "Keith Omware");
+        sightings.save();
+        Sightings sightings1 = new Sightings(2, "Nanyuki", "Anthony Mark");
+        sightings1.save();
+        assertTrue(Sightings.getallsightings().get(0).equals(sightings));
+        assertTrue(Sightings.getallsightings().get(1).equals(sightings1));
+
+
+    }
 
 }

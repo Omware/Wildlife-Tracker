@@ -1,59 +1,46 @@
 {{#partial "content"}}
 <div class="row">
-    <div class="col-md-8">
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Health</th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Lion</td>
-            <td>Endagered</td>
-            <td>okay</td>
-            <td>young</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Lion</td>
-            <td>Endagered</td>
-            <td>okay</td>
-            <td>young</td>
-        </tr>
-    </table>
-    </div>
+
     <div class="col-md-4">
                 <h1>Add a new Animal</h1>
-                <form>
+                <form action="/Animals" method="post">
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Name">
+                            <input type="text" class="form-control" id="name" name="name">
                         </div>
                     </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="endangeredInput" name="endangeredInput">
-                        <label class="form-check-label" for="endangeredInput">Endangered?</label>
-                    </div>
+
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <label for="healthInput">Health</label>
-                            <select class="form-control" name="healthInput" id="healthInput">
-                                <option>healthy</option>
-                                <option>ill</option>
-                                <option>okay</option>
+                            <label for="type">Type</label>
+                            <select class="form-control" name="type" id="type">
+                                <option></option>
+
+                                <option value="endangered">Endangered</option>
+                                <option value="notendangered">Not Endangered</option>
+
                             </select>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <label for="ageInput">Age</label>
-                            <select class="form-control" id="ageInput" name="ageInput">
-                                <option>newborn</option>
-                                <option>young</option>
-                                <option>adult</option>
+                            <label for="health">Health</label>
+                            <select class="form-control" name="health" id="health">
+                                <option></option>
+                                <option value="health">healthy</option>
+                                <option value="ill">ill</option>
+                                <option value="okay">okay</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <label for="age">Age</label>
+                            <select class="form-control" id="age" name="age">
+                                <option></option>
+                                <option value="newborn">newborn</option>
+                                <option value="young">young</option>
+                                <option value="adult">adult</option>
                             </select>
                         </div>
                     </div>
