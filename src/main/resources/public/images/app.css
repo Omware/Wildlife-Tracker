@@ -25,8 +25,9 @@ li a:hover {
   background-color: #111;
 }
 body {
-background-image: url("/images/gaz.jpg");
+background-image: url("/images/vb.jpg");
     background-size: cover;
+
     color: white;
     font-family: 'Dancing Script', cursive;
     font-size: 20px;
@@ -36,9 +37,14 @@ table {
   width: 100%;
 }
 
-th, td {
+ td {
   text-align: left;
   padding: 8px;
-}
 
+}
+th {
+    background-color:white;
+    padding: 8px;
+    color: black;
+}
 tr:nth-child(even) {background-color: black;}

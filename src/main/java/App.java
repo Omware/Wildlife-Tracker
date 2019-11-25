@@ -64,15 +64,15 @@ public class App {
             String name = request.queryParams("name");
             String type = request.queryParams("type");
 
-            if(type.equals("endangered")) {
-                String health = request.queryParams("health");
-                String age = request.queryParams("age");
-                EndageredAnimals endangeredAnimal = new EndageredAnimals(name, health, age);
-                endangeredAnimal.save();
-            }
-            else {
+            if(type.equals("notendangered")) {
                 NotEndagered notEndagered = new NotEndagered(name);
                 notEndagered.save();
+            }
+            else {
+                String health = request.queryParams("health");
+                String age = request.queryParams("age");
+                EndageredAnimals endangeredAnimal = new EndageredAnimals(name, age, health);
+                endangeredAnimal.save();
             }
 
             response.redirect("/Animals");
