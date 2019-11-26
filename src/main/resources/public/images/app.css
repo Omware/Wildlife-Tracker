@@ -50,3 +50,8 @@ th {
     color: black;
 }
 tr:nth-child(even) {background-color: black;}
+.align {
+text-align: center;
+font-family: 'Calistoga', cursive;
+padding: 30px;
+}
