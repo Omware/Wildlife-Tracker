@@ -23,6 +23,6 @@ dependencies {
 
 
 
-//applicationName = "Wildlife-Tracker"
-//mainClassName = 'App'
+applicationName = "Wildlife-Tracker"
+mainClassName = 'App'
 task stage(dependsOn: ['clean', 'installDist'])
