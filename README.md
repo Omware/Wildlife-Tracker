@@ -22,7 +22,7 @@ through the app's pages.
 * Postgres database.
 ```
 ## Deployment
-Link to live site: 
+Link to live site: https://wildlife-tracker101.herokuapp.com/
 ## Contact Information
 * Email: keithomware@gmail.com
 * Phone number: 0712759803
