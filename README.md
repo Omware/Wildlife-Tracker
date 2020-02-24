@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/liciolentimo/herosquad.svg?branch=master)](https://travis-ci.org/liciolentimo/herosquad)  [![Maintainability](https://api.codeclimate.com/v1/badges/d959262a23f4b2f17640/maintainability)](https://codeclimate.com/github/liciolentimo/herosquad/maintainability)
+
 ## Author 
 Keith Omware
 ## Wildlife-Tracker
